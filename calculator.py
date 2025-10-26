@@ -1,12 +1,14 @@
 from unit import Unit
 from distribution import DamageDistribution
+from constants import COVER_NONE, COVER_LIGHT, COVER_HEAVY
 
 class SWLegion:
     @staticmethod
-    def attack(attacker_ids, defender_id, weapons=None, attacker_minis=None, 
+    def attack(attacker_ids, defender_id, weapons=None, attacker_minis=None,
             attack_only=False, reroll_hits=False, reroll_surges=True,
-            aims=0, precise=0, attack_hit_surges=0, criticals=0, impacts=0, pierce=0, improvements=0, 
-            dodges=0, shields=0, defense_surges=0, defender_minis=0):
+            aims=0, precise=0, attack_hit_surges=0, criticals=0, impacts=0, pierce=0, improvements=0,
+            dodges=0, cover=COVER_NONE, shields=0, defense_surges=0, defender_minis=0,
+            ignore_dodges=False, bypass_immune_pierce=False):
         attackers = [Unit(attacker_id) for attacker_id in attacker_ids]
         defender = Unit(defender_id)
         defender_minis = defender.size if defender_minis == 0 else defender_minis
@@ -31,7 +33,9 @@ class SWLegion:
             wound_distribution = Unit.convert_attack_distribution_to_damage_distribution(pooled_attack_distribution) # TODO port into this file
         else:
             # Apply Damage
-            wound_distribution = defender.defend(pooled_attack_distribution, dodges=dodges, shields=shields, defense_surges=defense_surges, pierce=weapon_pool.pierce)
+            wound_distribution = defender.defend(pooled_attack_distribution, dodges=dodges, cover=cover,
+                                                shields=shields, defense_surges=defense_surges, pierce=weapon_pool.pierce,
+                                                ignore_dodges=ignore_dodges, bypass_immune_pierce=bypass_immune_pierce)
         
         # Print modifier text (for when manually modified results)
         modifiers = ""
@@ -55,12 +59,20 @@ class SWLegion:
             modifiers += "-- Pierce {} ".format(pierce)
         if(improvements):
             modifiers += "-- {} Attack Dice Improvements ".format(improvements)
+        if(cover == COVER_LIGHT):
+            modifiers += "-- Light Cover "
+        elif(cover == COVER_HEAVY):
+            modifiers += "-- Heavy Cover "
         if(dodges):
-            modifiers += "-- {} Dodges/Cover ".format(dodges)
+            modifiers += "-- {} Dodges ".format(dodges)
+        if(ignore_dodges):
+            modifiers += "-- High Velocity (Ignores Dodges) "
         if(shields):
             modifiers += "-- {} Shields ".format(shields)
         if(defense_surges):
             modifiers += "-- {} Surge-to-Blocks ".format(defense_surges)
+        if(bypass_immune_pierce):
+            modifiers += "-- Makashi Mastery (Bypasses Immune: Pierce) "
             
         DamageDistribution(wound_distribution, ' + '.join([attacker.name for attacker in attackers]), defender.name, modifiers=modifiers)
     
@@ -148,37 +160,187 @@ class SWLegion:
 #SWLegion.attack(['p1', 'p1', 'p1dc15', 'p1dc15'], 'b1')
 #SWLegion.attack(['p1', 'p1', 'p1z6', 'p1dc15'], 'b1')
 
-# Obi-Wan Experiments
-SWLegion.attack(['ob'], 'gg') 
-#SWLegion.attack(['ob'], 'b1')
-#SWLegion.attack(['ob'], 'dekas', shields=-4) # Melee
-#SWLegion.attack(['ob'], 'ob') 
-#SWLegion.attack(['ob'], 'ob', dodges=1, defense_surges=100)
-#SWLegion.attack(['ob'], 'p1')
-#SWLegion.attack(['ob'], 'barc')
+if __name__ == '__main__':
+    # New Imperial and Rebel Units Tests
+    print("\n=== NEW IMPERIAL & REBEL UNITS TESTS ===\n")
 
-# Grevious Experiments
-SWLegion.attack(['gg', 'gg'], 'ob') 
-SWLegion.attack(['gg', 'gg'], 'ob', criticals=100) 
-SWLegion.attack(['gg', 'gg'], 'ob', criticals=100, aims=1) 
-#SWLegion.attack(['gg', 'gg'], 'ob', dodges=1, defense_surges=100) 
-#SWLegion.attack(['gg', 'gg'], 'p1') 
-#SWLegion.attack(['gg', 'gg'], 'barc') 
-#SWLegion.attack(['gg', 'gg'], 'gg') 
-#SWLegion.attack(['gg', 'gg'], 'b1') 
-#SWLegion.attack(['gg', 'gg'], 'dekas', shields=-4) # Melee 
+    # Imperial tests
+    print("Darth Vader vs Luke Skywalker:")
+    SWLegion.attack(['vader'], 'luke')
 
-# B1 Battle Droid Experiments
-#SWLegion.attack(['b1'], 'b1')
-#SWLegion.attack(['b1'], 'b1', dodges=2)
-#SWLegion.attack(['b1'], 'p1')
-#SWLegion.attack(['b1'], 'p1', dodges=2)
-#SWLegion.attack(['b1', 'b1e5'], 'b1')
-#SWLegion.attack(['b1', 'b1e5'], 'b1', dodges=2)
-#SWLegion.attack(['b1', 'b1e5'], 'p1')
-#SWLegion.attack(['b1', 'b1e5'], 'p1', dodges=2)
-#SWLegion.attack(['b1', 'b1e6'], 'b1')
-#SWLegion.attack(['b1', 'b1e6'], 'b1', dodges=2)
-#SWLegion.attack(['b1', 'b1e6'], 'p1')
-#SWLegion.attack(['b1', 'b1e6'], 'p1', dodges=2)
+    print("\nBoba Fett vs Han Solo (EE-3 Carbine):")
+    SWLegion.attack(['boba'], 'han', weapons=[2])
+    
+    print("\nStormtroopers vs Rebel Troopers:")
+    SWLegion.attack(['storms'], 'rebels')
+    
+    print("\nAT-ST vs Phase I Clones (Twin Blaster Cannon):")
+    SWLegion.attack(['atst'], 'p1', weapons=[1])
+    
+    # Rebel tests
+    print("\nLuke Skywalker vs Darth Vader (lightsaber):")
+    SWLegion.attack(['luke'], 'vader', weapons=[0])
+    
+    print("\nHan Solo vs Stormtroopers (DL-44):")
+    SWLegion.attack(['han'], 'storms', weapons=[1])
+    
+    print("\nChewbacca vs B2 Super Battle Droids (Bowcaster):")
+    SWLegion.attack(['chewie'], 'b2', weapons=[1])
+    
+    print("\nRebel Commandos vs Scout Troopers:")
+    SWLegion.attack(['rebelcommandos'], 'scouts')
+    
+    # Special Mechanics Tests
+    print("\n=== SPECIAL MECHANICS TESTS ===\n")
+    
+    # Test Makashi Mastery (Bypass Immune: Pierce)
+    print("Count Dooku vs Obi-Wan (normal - both have Immune: Pierce):")
+    SWLegion.attack(['dooku'], 'ob', weapons=[0])
+    
+    print("\nCount Dooku vs Obi-Wan (WITH Makashi Mastery - bypasses Immune: Pierce BUT Pierce 2->1):")
+    SWLegion.attack(['dooku'], 'ob', weapons=[0], bypass_immune_pierce=True, pierce=-1)
+    
+    print("\nCount Dooku vs Obi-Wan (Makashi without pierce reduction - for comparison):")
+    SWLegion.attack(['dooku'], 'ob', weapons=[0], bypass_immune_pierce=True)
+    
+    # Test High Velocity (Ignore Dodges) - better example with Phase I Clones
+    print("\nPhase II Clones vs Cad Bane (normal - 2 dodges):")
+    SWLegion.attack(['p2'], 'cadbane')
+    
+    print("\nPhase II Clones vs Cad Bane (WITH High Velocity - ignores dodges):")
+    SWLegion.attack(['p2'], 'cadbane', ignore_dodges=True)
+    
+    # Test both together
+    print("\nCount Dooku vs Asajj Ventress (normal - she has 1 dodge and Immune: Pierce):")
+    SWLegion.attack(['dooku'], 'ventress', weapons=[0])
+    
+    print("\nCount Dooku vs Asajj Ventress (Makashi + High Velocity - bypasses both):")
+    SWLegion.attack(['dooku'], 'ventress', weapons=[0], bypass_immune_pierce=True, ignore_dodges=True)
+    
+    # New Separatist Units Tests
+    print("\n=== NEW SEPARATIST UNITS TESTS ===\n")
+    
+    # Test new commanders
+    #print("Count Dooku vs Obi-Wan (melee):")
+    #SWLegion.attack(['dooku'], 'ob', weapons=[0])
+    
+    #print("\nCount Dooku vs Obi-Wan (lightning):")
+    #SWLegion.attack(['dooku'], 'ob', weapons=[1])
+    
+    # Test new operatives
+    print("\nAsajj Ventress vs Ahsoka:")
+    SWLegion.attack(['ventress'], 'ahsoka')
+    
+    print("\nMaul vs Anakin:")
+    SWLegion.attack(['maul'], 'anakin')
+    
+    print("\nCad Bane vs Phase I Clones (blasters):")
+    SWLegion.attack(['cadbane'], 'p1', weapons=[1])
+    
+    # Test new corps
+    print("\nB2 Super Battle Droids vs Phase I Clones (arm cannons):")
+    SWLegion.attack(['b2'], 'p1', weapons=[1])
+    
+    print("\nGeonosian Warriors vs B1s (blasters):")
+    SWLegion.attack(['geonosians'], 'b1', weapons=[1])
+    
+    # Test special forces
+    print("\nBX Commandos vs Phase I Clones (rifles):")
+    SWLegion.attack(['bx'], 'p1', weapons=[1])
+    
+    print("\nIG-100 MagnaGuards vs Obi-Wan (melee):")
+    SWLegion.attack(['magnaguards'], 'ob', weapons=[0])
+    
+    # Test vehicles
+    print("\nAAT Battle Tank vs TX-130 (artillery cannon):")
+    SWLegion.attack(['aat'], 'tx130', weapons=[1])
+    
+    print("\nSTAP Riders vs Phase II Clones:")
+    SWLegion.attack(['stap'], 'p2')
+    
+    # New Republic Units Tests
+    print("\n=== NEW REPUBLIC UNITS TESTS ===\n")
+    
+    # Test new commanders
+    #print("Anakin vs B1 Battle Droids:")
+    #SWLegion.attack(['anakin'], 'b1')
+    
+    #print("\nAhsoka vs General Grievous:")
+    #SWLegion.attack(['ahsoka'], 'gg')
+    
+    #print("\nYoda vs General Grievous (melee):")
+    #SWLegion.attack(['yoda'], 'gg', weapons=[0])
+    
+    # Test new corps
+    #print("\nPhase II Clones vs B1s:")
+    #SWLegion.attack(['p2'], 'b1')
+    
+    #print("\nARC Troopers vs B1s (using blaster rifles):")
+    #SWLegion.attack(['arc'], 'b1', weapons=[2])
+    
+    # Test vehicles
+    #print("\nTX-130 vs Obi-Wan:")
+    #SWLegion.attack(['tx130'], 'ob')
+    
+    #print("\nAT-RT vs B1s (melee):")
+    #SWLegion.attack(['atrt'], 'b1', weapons=[0])
+    
+    print("\n=== COVER SYSTEM TESTS ===\n")
+    
+    # Basic cover test: Phase I vs B1s
+    #print("Phase I Clones vs B1 Battle Droids - No Cover:")
+    #SWLegion.attack(['p1'], 'b1')
+    
+    #print("\nPhase I Clones vs B1 Battle Droids - Light Cover:")
+    #SWLegion.attack(['p1'], 'b1', cover=COVER_LIGHT)
+    
+    #print("\nPhase I Clones vs B1 Battle Droids - Heavy Cover:")
+    #SWLegion.attack(['p1'], 'b1', cover=COVER_HEAVY)
+    
+    # BARC speeder cover improvement test
+    #print("\nPhase I Clones vs BARC Speeder - No Cover (BARC has Cover 1, so becomes Light):")
+    #SWLegion.attack(['p1'], 'barc')
+    
+    #print("\nPhase I Clones vs BARC Speeder - Light Cover (BARC improves to Heavy):")
+    #SWLegion.attack(['p1'], 'barc', cover=COVER_LIGHT)
+    
+    # Cover + Dodges stacking test
+    #print("\nPhase I Clones vs B1s - Light Cover + 1 Dodge:")
+    #SWLegion.attack(['p1'], 'b1', cover=COVER_LIGHT, dodges=1)
+    
+    print("\n=== ORIGINAL TESTS ===\n")
+    
+    # Obi-Wan Experiments
+    #SWLegion.attack(['ob'], 'gg')
+    #SWLegion.attack(['ob'], 'b1')
+    #SWLegion.attack(['ob'], 'dekas', shields=-4) # Melee
+    #SWLegion.attack(['ob'], 'ob')
+    #SWLegion.attack(['ob'], 'ob', dodges=1, defense_surges=100)
+    #SWLegion.attack(['ob'], 'p1')
+    #SWLegion.attack(['ob'], 'barc')
+    
+    # Grevious Experiments
+    #SWLegion.attack(['gg', 'gg'], 'ob')
+    #SWLegion.attack(['gg', 'gg'], 'ob', criticals=100)
+    #SWLegion.attack(['gg', 'gg'], 'ob', criticals=100, aims=1) 
+    #SWLegion.attack(['gg', 'gg'], 'ob', dodges=1, defense_surges=100) 
+    #SWLegion.attack(['gg', 'gg'], 'p1') 
+    #SWLegion.attack(['gg', 'gg'], 'barc') 
+    #SWLegion.attack(['gg', 'gg'], 'gg') 
+    #SWLegion.attack(['gg', 'gg'], 'b1') 
+    #SWLegion.attack(['gg', 'gg'], 'dekas', shields=-4) # Melee 
+    
+    # B1 Battle Droid Experiments
+    #SWLegion.attack(['b1'], 'b1')
+    #SWLegion.attack(['b1'], 'b1', dodges=2)
+    #SWLegion.attack(['b1'], 'p1')
+    #SWLegion.attack(['b1'], 'p1', dodges=2)
+    #SWLegion.attack(['b1', 'b1e5'], 'b1')
+    #SWLegion.attack(['b1', 'b1e5'], 'b1', dodges=2)
+    #SWLegion.attack(['b1', 'b1e5'], 'p1')
+    #SWLegion.attack(['b1', 'b1e5'], 'p1', dodges=2)
+    #SWLegion.attack(['b1', 'b1e6'], 'b1')
+    #SWLegion.attack(['b1', 'b1e6'], 'b1', dodges=2)
+    #SWLegion.attack(['b1', 'b1e6'], 'p1')
+    #SWLegion.attack(['b1', 'b1e6'], 'p1', dodges=2)
 
