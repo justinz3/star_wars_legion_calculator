@@ -2,231 +2,395 @@ from unit_config_properties import UnitProperties as Props
 from dice import DefenseDice, MAX_DICE_ROLLED
 from weapon import Weapon
 from constants import UNLIMITED_TOKENS
+from constants import UNLIMITED_TOKENS
 
 republic_config = {
-    # ===== COMMANDERS =====
-    'ob': {
-        Props.NAME: 'Obi-Wan Kenobi',
+
+    # ===== COMMANDER =====
+    'anakinskywalker': {
+        Props.NAME: 'Anakin Skywalker',
+        Props.RANK: 'commander',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([2, 2, 2], impacts=2, criticals=2, pierce=2) # Obi-Wan's Lightsaber
+            Weapon([0, 0, 5], impacts=3, pierce=3, name="Anakin's Lightsaber"),  # Anakin's Lightsaber
         ],
         Props.SAVES: DefenseDice.RED,
         Props.IMMUNE_PIERCE: True,
     },
-    'anakin': {
-        Props.NAME: 'Anakin Skywalker',
+    'chewbaccarepublic': {
+        Props.NAME: 'Chewbacca (Republic)',
+        Props.RANK: 'commander',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([0, 0, 5], impacts=3, pierce=3) # Anakin's Lightsaber
+            Weapon([0, 0, 4], name="Overwhelm"),  # Overwhelm
+            Weapon([2, 0, 2], impacts=1, criticals=1, pierce=1, name="Chewbacca's Bowcaster"),  # Chewbacca's Bowcaster
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        # Warnings: No range found
+    },
+    'clonecaptainrex': {
+        Props.NAME: 'Clone Captain Rex',
+        Props.RANK: 'commander',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 0, 2], name="Advanced Combat Training"),  # Advanced Combat Training
+            Weapon([0, 0, 3], name="Dual DC-17 Hand Blasters"),  # Dual DC-17 Hand Blasters
+        ],
+        Props.SAVES: DefenseDice.RED,
+        # Warnings: No range found
+    },
+    'clonecommander': {
+        Props.NAME: 'Clone Commander',
+        Props.RANK: 'commander',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 0, 2], name="Advanced Combat Training"),  # Advanced Combat Training
+            Weapon([0, 3, 0], name="Commander's DC-15 Blaster Rifle"),  # Commander's DC-15 Blaster Rifle
+        ],
+        Props.SAVES: DefenseDice.RED,
+        # Warnings: No range found
+    },
+    'clonecommandercody': {
+        Props.NAME: 'Clone Commander Cody',
+        Props.RANK: 'commander',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 0, 2], name="Advanced Combat Training"),  # Advanced Combat Training
+            Weapon([1, 1, 2], name="Cody's DC-15a Blaster"),  # Cody's DC-15a Blaster
+        ],
+        Props.SAVES: DefenseDice.RED,
+        Props.COVER_IMPROVEMENT: 1,
+        # Warnings: No range found
+    },
+    'obiwankenobi': {
+        Props.NAME: 'Obi-Wan Kenobi',
+        Props.RANK: 'commander',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([2, 2, 2], impacts=2, criticals=2, pierce=2, name="Obi-Wan's Lightsaber"),  # Obi-Wan's Lightsaber
         ],
         Props.SAVES: DefenseDice.RED,
         Props.IMMUNE_PIERCE: True,
+    },
+    'pykesyndicatecapo': {
+        Props.NAME: 'Pyke Syndicate Capo',
+        Props.RANK: 'commander',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 1, 0], name="Unarmed"),  # Unarmed
+            Weapon([0, 3, 0], name="Capo's P13 Long Blaster"),  # Capo's P13 Long Blaster
+            Weapon([0, 0, 0], name=""),  # 
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+        Props.DODGES: 1,
+        # Warnings: No range found, No dice pool found
+    },
+    'wookieechieftain': {
+        Props.NAME: 'Wookiee Chieftain',
+        Props.RANK: 'commander',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([2, 2, 2], name="Ancestral Weapon"),  # Ancestral Weapon
+            Weapon([0, 4, 0], impacts=1, pierce=1, name="Chieftain's Bowcaster"),  # Chieftain's Bowcaster
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+        # Warnings: No range found
     },
     'yoda': {
         Props.NAME: 'Yoda',
+        Props.RANK: 'commander',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([0, 0, 4], impacts=2, pierce=2),  # Yoda's Lightsaber (melee)
-            Weapon([0, 4, 0]),                        # Force Wave (range 1-2, Blast, Suppressive - not simulated)
+            Weapon([0, 0, 4], impacts=2, pierce=2, name="Yoda's Lightsaber"),  # Yoda's Lightsaber
+            Weapon([0, 4, 0], name="Force Wave"),  # Force Wave
         ],
         Props.SAVES: DefenseDice.WHITE,
-        Props.HIT_SURGES: UNLIMITED_TOKENS,   # Surge: Hit
-        Props.BLOCK_SURGES: UNLIMITED_TOKENS, # Surge: Block
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
         Props.IMMUNE_PIERCE: True,
-    },
-    'rex': {
-        Props.NAME: 'Clone Captain Rex',
-        Props.SIZE: 1,
-        Props.WEAPONS: [
-            Weapon([0, 0, 2]),  # Advanced Combat Training (melee)
-            Weapon([0, 0, 3]),  # Dual DC-17 Hand Blasters (range 1-2, Gunslinger not simulated)
-        ],
-        Props.SAVES: DefenseDice.RED,
-    },
-    'cody': {
-        Props.NAME: 'Clone Commander Cody',
-        Props.SIZE: 1,
-        Props.WEAPONS: [
-            Weapon([0, 0, 2]),              # Advanced Combat Training (melee)
-            Weapon([1, 1, 2], impacts=1),   # Cody's DC-15a Blaster (range 1-4, Lethal 1 not simulated)
-        ],
-        Props.SAVES: DefenseDice.RED,
-        Props.CRIT_SURGES: UNLIMITED_TOKENS, # Surge: Crit
-    },
-    'ahsoka': {
-        Props.NAME: 'Ahsoka Tano',
-        Props.SIZE: 1,
-        Props.WEAPONS: [
-            Weapon([2, 2, 2], impacts=2, pierce=2)  # Ahsoka's Lightsabers (Jar'Kai Mastery, Deflect not simulated)
-        ],
-        Props.SAVES: DefenseDice.RED,
-        Props.CRIT_SURGES: UNLIMITED_TOKENS, # Surge: Crit
-        Props.IMMUNE_PIERCE: True,
-        # NOTE: Deflect only works vs ranged attacks - not simulated
+        # Warnings: No range found
     },
 
-    # ===== OPERATIVES =====
-    'padme': {
+    # ===== OPERATIVE =====
+    'padmamidala': {
         Props.NAME: 'Padmé Amidala',
+        Props.RANK: 'operative',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([0, 3, 0]),              # Martial Arts (melee)
-            Weapon([0, 3, 0], pierce=1),    # Padmé's ELG-3A Blaster Pistol (range 1-2, Sharpshooter 2 not simulated)
+            Weapon([0, 3, 0], name="Martial Arts"),  # Martial Arts
+            Weapon([0, 3, 0], pierce=1, name="Padmé's ELG-3A Blaster Pistol"),  # Padmé's ELG-3A Blaster Pistol
+            Weapon([1, 0, 1], pierce=1, name="Looted E-5 Blaster"),  # Looted E-5 Blaster
         ],
         Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+        # Warnings: No range found
     },
     'r2d2': {
         Props.NAME: 'R2-D2',
+        Props.RANK: 'operative',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([3, 0, 0])  # Electro-Shock (melee/range 1, Suppressive not simulated)
+            Weapon([3, 0, 0], name="Electro-Shock"),  # Electro-Shock
         ],
         Props.SAVES: DefenseDice.WHITE,
-        Props.HIT_SURGES: UNLIMITED_TOKENS,   # Surge: Hit
-        Props.BLOCK_SURGES: UNLIMITED_TOKENS, # Surge: Block
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+    },
+    'thebadbatch': {
+        Props.NAME: 'The Bad Batch',
+        Props.RANK: 'operative',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 0, 1], name="Advanced Combat Training"),  # Advanced Combat Training
+            Weapon([1, 1, 0], name="DC-17 Hand Blaster"),  # DC-17 Hand Blaster
+            Weapon([1, 1, 1], name="Wrecker (Bad Batch)"),  # Wrecker (Bad Batch)
+            Weapon([0, 0, 1], criticals=1, pierce=1, name="Crosshair (Bad Batch)"),  # Crosshair (Bad Batch)
+            Weapon([2, 0, 0], name="Omega"),  # Omega
+        ],
+        Props.SAVES: DefenseDice.RED,
+        Props.IMPERVIOUS: True,
+        # Warnings: No range found
     },
 
     # ===== CORPS =====
-    'p1': {
-        Props.NAME: 'Phase-I Clone Troopers',
-        Props.SIZE: 4,
-        Props.WEAPONS: [
-            Weapon([0, 1, 0])   # Unarmed, DC-15A Blaster Rifle
-        ],
-        Props.SAVES: DefenseDice.RED,
-    },
-    'p1z6': {
-        Props.NAME: 'Z-6 Phase I Trooper',
+    'phaseiclonetroopers': {
+        Props.NAME: 'Phase I Clone Troopers',
+        Props.RANK: 'corps',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([6, 0, 0]),
-            Weapon([0, 1, 0])   # Unarmed, DC-15A Blaster Rifle
+            Weapon([0, 1, 0], name="Unarmed"),  # Unarmed
+            Weapon([0, 1, 0], name="DC-15A Blaster Rifle"),  # DC-15A Blaster Rifle
+            Weapon([6, 0, 0], name="Z-6 Phase I Trooper"),  # Z-6 Phase I Trooper
+            Weapon([0, 0, 2], criticals=1, name="DC-15 Phase I Trooper"),  # DC-15 Phase I Trooper
+            Weapon([1, 2, 0], pierce=1, name="DP-23 Phase I Trooper"),  # DP-23 Phase I Trooper
+            Weapon([1, 1, 1], impacts=2, name="RPS-6 Phase I Trooper"),  # RPS-6 Phase I Trooper
         ],
         Props.SAVES: DefenseDice.RED,
+        # Warnings: No range found
     },
-    'p1dc15': {
-        Props.NAME: 'DC-15 Phase I Trooper',
+    'phaseiiclonetroopers': {
+        Props.NAME: 'Phase II Clone Troopers',
+        Props.RANK: 'corps',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([0, 0, 2], criticals=1),
-            Weapon([0, 1, 0])   # Unarmed, DC-15A Blaster Rifle
+            Weapon([0, 1, 0], name="Unarmed"),  # Unarmed
+            Weapon([0, 1, 0], name="DC-15A Blaster Rifle"),  # DC-15A Blaster Rifle
         ],
         Props.SAVES: DefenseDice.RED,
+        # Warnings: No range found
     },
-    'p2': {
-        Props.NAME: 'Phase-II Clone Troopers',
-        Props.SIZE: 4,
-        Props.WEAPONS: [
-            Weapon([0, 1, 0])   # Unarmed, DC-15A Blaster Rifle (melee/range 1-3)
-        ],
-        Props.SAVES: DefenseDice.RED,
-    },
-    'p2z6': {
-        Props.NAME: 'Z-6 Phase II Trooper',
+    'pykesyndicatefootsoldiers': {
+        Props.NAME: 'Pyke Syndicate Foot Soldiers',
+        Props.RANK: 'corps',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([6, 0, 0]),  # Z-6 Rotary Blaster (range 1-3)
-            Weapon([0, 1, 0])   # Unarmed, DC-15A Blaster Rifle
+            Weapon([2, 0, 0], name="Stun Baton"),  # Stun Baton
+            Weapon([0, 1, 0], name="P13 Long Blaster"),  # P13 Long Blaster
         ],
-        Props.SAVES: DefenseDice.RED,
-    },
-    'p2mortar': {
-        Props.NAME: 'Phase II Mortar Trooper',
-        Props.SIZE: 1,
-        Props.WEAPONS: [
-            Weapon([0, 2, 0], criticals=1),  # Mortar (range 2-4, Suppressive, Cumbersome not simulated)
-            Weapon([0, 1, 0])                 # Unarmed, DC-15A Blaster Rifle
-        ],
-        Props.SAVES: DefenseDice.RED,
+        Props.SAVES: DefenseDice.WHITE,
+        Props.DODGES: 1,
+        # Warnings: No range found
     },
 
     # ===== SPECIAL FORCES =====
-    'arc': {
+    'arctroopers': {
         Props.NAME: 'ARC Troopers',
-        Props.SIZE: 4,
+        Props.RANK: 'special forces',
+        Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([1, 1, 0]),  # Combat Training (melee)
-            Weapon([1, 1, 0]),  # DC-17 Hand Blasters (range 1-2)
-            Weapon([1, 1, 0]),  # DC-15A Blaster Rifle (range 1-3, Sharpshooter 1 not simulated)
+            Weapon([1, 1, 0], name="Combat Training"),  # Combat Training
+            Weapon([1, 1, 0], name="DC-17 Hand Blasters"),  # DC-17 Hand Blasters
+            Weapon([1, 1, 0], name="DC-15A Blaster Rifle"),  # DC-15A Blaster Rifle
+            Weapon([0, 1, 1], criticals=1, name="DC-15x ARC Trooper"),  # DC-15x ARC Trooper
+            Weapon([0, 3, 0], name="Fives"),  # Fives
+            Weapon([0, 0, 2], criticals=1, name="Echo"),  # Echo
         ],
         Props.SAVES: DefenseDice.RED,
-        Props.BLOCK_SURGES: UNLIMITED_TOKENS, # Surge: Block
         Props.IMPERVIOUS: True,
+        # Warnings: No range found, No range found
     },
-    'wookiees': {
-        Props.NAME: 'Wookiee Warriors',
-        Props.SIZE: 3,
+    'arctroopersstriketeam': {
+        Props.NAME: 'ARC Troopers (Strike Team)',
+        Props.RANK: 'special forces',
+        Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([0, 2, 0]),  # Ryyk Blade (melee, Charge not simulated)
-            Weapon([1, 1, 0]),  # Kashyyyk Pistol (range 1-2)
+            Weapon([1, 1, 0], name="Combat Training"),  # Combat Training
+            Weapon([1, 1, 0], name="DC-17 Hand Blasters"),  # DC-17 Hand Blasters
+            Weapon([1, 1, 0], name="DC-15A Blaster Rifle"),  # DC-15A Blaster Rifle
+        ],
+        Props.SAVES: DefenseDice.RED,
+        Props.IMPERVIOUS: True,
+        # Warnings: No range found, No range found
+    },
+    'wookieewarriorskashyyykdefenders': {
+        Props.NAME: 'Wookiee Warriors (Kashyyyk Defenders)',
+        Props.RANK: 'special forces',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([1, 1, 0], name="Combat Training"),  # Combat Training
+            Weapon([2, 0, 0], name="X1 Carbine"),  # X1 Carbine
+            Weapon([0, 2, 2], name="Battle Shield Wookiee"),  # Battle Shield Wookiee
+            Weapon([1, 0, 1], impacts=1, pierce=1, name="Bowcaster Wookiee"),  # Bowcaster Wookiee
+            Weapon([0, 2, 0], name="Long Gun Wookiee"),  # Long Gun Wookiee
         ],
         Props.SAVES: DefenseDice.WHITE,
-        # NOTE: Indomitable (roll red dice instead of white during Rally) not simulated
+        # Warnings: No range found
+    },
+    'wookieewarriorsnoblefighters': {
+        Props.NAME: 'Wookiee Warriors (Noble Fighters)',
+        Props.RANK: 'special forces',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([2, 0, 0], name="Ryyk Blade"),  # Ryyk Blade
+            Weapon([1, 1, 0], name="Kashyyyk Pistol"),  # Kashyyyk Pistol
+            Weapon([0, 2, 2], name="Battle Shield Wookiee"),  # Battle Shield Wookiee
+            Weapon([1, 0, 1], impacts=1, pierce=1, name="Bowcaster Wookiee"),  # Bowcaster Wookiee
+            Weapon([0, 2, 0], name="Long Gun Wookiee"),  # Long Gun Wookiee
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        # Warnings: No range found
     },
 
     # ===== SUPPORT =====
-    'barc': {
+    'atrtgalacticrepublic': {
+        Props.NAME: 'AT-RT (Galactic Republic)',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 0, 3], impacts=1, name="Grappling Claws"),  # Grappling Claws
+            Weapon([2, 1, 0], impacts=1, criticals=1, name="Merr-Sonn RPC-2 Rocket Launcher"),  # Merr-Sonn RPC-2 Rocket Launcher
+            Weapon([0, 2, 0], name="AT-RT Flamethrower"),  # AT-RT Flamethrower
+            Weapon([0, 2, 1], impacts=3, name="AT-RT Laser Cannon"),  # AT-RT Laser Cannon
+            Weapon([0, 5, 0], name="AT-RT Rotary Blaster"),  # AT-RT Rotary Blaster
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+        Props.ARMOR: 1,
+        # Warnings: No range found
+    },
+    'barcspeeder': {
         Props.NAME: 'BARC Speeder',
+        Props.RANK: 'support',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([1, 1, 1]),              # Twin Light Blaster Cannons
-            Weapon([0, 1, 0]),              # DC-15A Blaster Rifle
-            Weapon([1, 3, 0], impacts=1),   # BARC Ion Gunner
-            Weapon([1, 1, 1], impacts=2),   # BARC RPS-6 Gunner
-            Weapon([2, 2, 0]),              # BARC Twin Laser Gunner
+            Weapon([0, 1, 0], name="DC-15A Blaster Rifle"),  # DC-15A Blaster Rifle
+            Weapon([1, 1, 1], name="Twin Light Blaster Cannons"),  # Twin Light Blaster Cannons
+            Weapon([0, 0, 0], name="Fixed: Front"),  # Fixed: Front
+            Weapon([1, 1, 1], impacts=2, name="BARC RPS-6 Gunner"),  # BARC RPS-6 Gunner
+            Weapon([1, 3, 0], impacts=1, name="BARC Ion Gunner"),  # BARC Ion Gunner
+            Weapon([2, 2, 0], name="BARC Twin Laser Gunner"),  # BARC Twin Laser Gunner
         ],
         Props.SAVES: DefenseDice.RED,
-        Props.HIT_SURGES: UNLIMITED_TOKENS,   # Attack Surge: Hit (converts all attack surges to hits)
-        Props.COVER_IMPROVEMENT: 1,           # Cover 1 keyword
+        Props.COVER_IMPROVEMENT: 1,
+        # Warnings: No range found, No dice pool found
     },
-    'atrt': {
-        Props.NAME: 'AT-RT',
-        Props.SIZE: 1,
-        Props.WEAPONS: [
-            Weapon([0, 0, 3], impacts=1),           # Grappling Claws (melee)
-            Weapon([2, 1, 0], criticals=1, impacts=1), # RPC-2 Rocket Launcher (range 1-3)
-            # TODO: Add hardpoint weapons (Flamethrower, Laser Cannon, Rotary Blaster)
-        ],
-        Props.SAVES: DefenseDice.WHITE,
-        Props.HIT_SURGES: UNLIMITED_TOKENS,   # Surge: Hit
-        Props.BLOCK_SURGES: UNLIMITED_TOKENS, # Surge: Block
-        Props.ARMOR: 1, # Armor keyword
-    },
-    'commandos': {
+    'clonecommandos': {
         Props.NAME: 'Clone Commandos',
-        Props.SIZE: 4,
-        Props.WEAPONS: [
-            Weapon([0, 2, 0]),  # Gauntlet Vibroblade (melee)
-            Weapon([1, 1, 0]),  # DC-17m ICWS Blaster Carbine (range 1-2, Suppressive not simulated)
-        ],
-        Props.SAVES: DefenseDice.RED,
-        Props.SHIELDS: 1, # Shielded 1 (treating as 1 shield token)
-    },
-    'isp': {
-        Props.NAME: 'Infantry Support Platform',
+        Props.RANK: 'support',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([0, 2, 0])  # DC-15 Blaster Rifles (range 1-3)
+            Weapon([0, 2, 0], name="Gauntlet Vibroblade"),  # Gauntlet Vibroblade
+            Weapon([1, 1, 0], name="DC17m ICWS Blaster Carbine"),  # DC17m ICWS Blaster Carbine
+            Weapon([0, 2, 1], impacts=1, name="DC-17m ICWS Sniper/Anti-Armor Config"),  # DC-17m ICWS Sniper/Anti-Armor Config
+        ],
+        Props.SAVES: DefenseDice.RED,
+        Props.ARMOR: 1,
+        Props.SHIELDS: 1,
+        # Warnings: No range found
+    },
+    'clonecommandosdeltasquad': {
+        Props.NAME: 'Clone Commandos (Delta Squad)',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 2, 0], name="Gauntlet Vibroblade"),  # Gauntlet Vibroblade
+            Weapon([0, 2, 0], name="DC17m ICWS Blaster Carbine"),  # DC17m ICWS Blaster Carbine
+            Weapon([0, 2, 1], impacts=1, name="DC-17m ICWS Sniper/Anti-Armor Config"),  # DC-17m ICWS Sniper/Anti-Armor Config
+        ],
+        Props.SAVES: DefenseDice.RED,
+        Props.ARMOR: 1,
+        Props.SHIELDS: 1,
+        # Warnings: No range found
+    },
+    'raddaughgnaspfluttercraft': {
+        Props.NAME: 'Raddaugh Gnasp Fluttercraft',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([1, 1, 0], name="Pilot's Kashyyyk Pistol"),  # Pilot's Kashyyyk Pistol
+            Weapon([2, 0, 2], name="Gnasp Bombardier"),  # Gnasp Bombardier
+            Weapon([0, 2, 2], impacts=1, pierce=1, name="Gnasp Gunner"),  # Gnasp Gunner
         ],
         Props.SAVES: DefenseDice.WHITE,
-        Props.HIT_SURGES: UNLIMITED_TOKENS,   # Surge: Hit
-        Props.BLOCK_SURGES: UNLIMITED_TOKENS, # Surge: Block
-        Props.ARMOR: 3,
-        Props.COVER_IMPROVEMENT: 1, # Cover 1
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+    },
+    'raddaughgnaspfluttercraftattackcraft': {
+        Props.NAME: 'Raddaugh Gnasp Fluttercraft (Attack Craft)',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([1, 1, 0], name="Pilot's Kashyyyk Pistol"),  # Pilot's Kashyyyk Pistol
+            Weapon([2, 0, 2], name="Gnasp Bombardier"),  # Gnasp Bombardier
+            Weapon([0, 2, 2], impacts=1, pierce=1, name="Gnasp Gunner"),  # Gnasp Gunner
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+    },
+    'swoopbikeriders': {
+        Props.NAME: 'Swoop Bike Riders',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([1, 1, 0], name="Heavy Blaster Pistol"),  # Heavy Blaster Pistol
+            Weapon([0, 1, 2], name="Vibroaxe"),  # Vibroaxe
+            Weapon([0, 0, 0], name="Keywords"),  # Keywords
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        Props.DODGES: 1,
+        Props.COVER_IMPROVEMENT: 1,
+        # Warnings: No range found, No dice pool found
+    },
+    'laatlepatroltransport': {
+        Props.NAME: 'LAAT/le Patrol Transport',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([0, 3, 1], name="Twin Laser Cannons"),  # Twin Laser Cannons
+            Weapon([0, 0, 0], name="Fixed: Front"),  # Fixed: Front
+        ],
+        Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+        Props.ARMOR: 1,
+        Props.COVER_IMPROVEMENT: 1,
+        # Warnings: No dice pool found, No range found
+    },
+    'tx130saberclassfightertank': {
+        Props.NAME: 'TX-130 Saber-class Fighter Tank',
+        Props.RANK: 'support',
+        Props.SIZE: 1,
+        Props.WEAPONS: [
+            Weapon([2, 2, 2], impacts=2, criticals=1, name="Twin Lateral GA-6n Laser Cannons"),  # Twin Lateral GA-6n Laser Cannons
+            Weapon([0, 3, 0], criticals=1, name="TX-130 Twin Laser Turret"),  # TX-130 Twin Laser Turret
+            Weapon([0, 0, 2], name="TX-130 Beam Cannon Turret"),  # TX-130 Beam Cannon Turret
+        ],
+        Props.SAVES: DefenseDice.RED,
+        Props.ARMOR: 1,
     },
 
     # ===== HEAVY =====
-    'tx130': {
-        Props.NAME: 'TX-130 Saber-class Fighter Tank',
+    'infantrysupportplatform': {
+        Props.NAME: 'Infantry Support Platform',
+        Props.RANK: 'heavy',
         Props.SIZE: 1,
         Props.WEAPONS: [
-            Weapon([2, 2, 2], criticals=1, impacts=2)  # Twin Lateral GA-6n Laser Cannons (range 1-4, Fixed: Front not simulated)
-            # NOTE: Arsenal 2 allows attacking with multiple weapons - user can simulate by adding same unit multiple times
-            # TODO: Add turret weapons (Twin Laser Turret, Beam Cannon Turret)
+            Weapon([0, 2, 0], name="DC-15 Blaster Rifles"),  # DC-15 Blaster Rifles
+            Weapon([2, 0, 2], name="Twin Beam Cannons"),  # Twin Beam Cannons
+            Weapon([0, 6, 0], criticals=2, name="Twin Blaster Cannons"),  # Twin Blaster Cannons
+            Weapon([0, 0, 4], impacts=2, name="Twin Missile Pods"),  # Twin Missile Pods
         ],
-        Props.SAVES: DefenseDice.RED,
-        Props.ARMOR: 1, # Armor keyword (exact value not specified, using 1)
-        # NOTE: Weak Point 1: Rear, Sides not simulated (directional defense)
+        Props.SAVES: DefenseDice.WHITE,
+        Props.BLOCK_SURGES: UNLIMITED_TOKENS,
+        Props.ARMOR: 3,
+        Props.COVER_IMPROVEMENT: 1,
     },
 }

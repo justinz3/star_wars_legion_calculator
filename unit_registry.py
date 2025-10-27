@@ -6,6 +6,7 @@ from republic_config import republic_config
 from separatist_config import separatist_config
 from empire_config import empire_config
 from rebel_config import rebel_config
+from mercenary_config import mercenary_config
 
 # Define unit types in order
 UNIT_TYPES = [
@@ -17,47 +18,20 @@ UNIT_TYPES = [
     'Heavy'
 ]
 
-# Manually map unit IDs to types based on the config files
-# This could be automated by adding type info to configs, but manual mapping works for now
-REPUBLIC_UNITS = {
-    'Commanders': ['ob', 'anakin', 'yoda', 'rex', 'cody', 'ahsoka'],
-    'Operatives': ['padme', 'r2d2'],
-    'Corps': ['p1', 'p1z6', 'p1dc15', 'p2', 'p2z6', 'p2mortar'],
-    'Special Forces': ['arc', 'wookiees'],
-    'Support': ['barc', 'atrt', 'commandos', 'isp'],
-    'Heavy': ['tx130'],
-}
-
-SEPARATIST_UNITS = {
-    'Commanders': ['gg', 'dooku', 'tseries'],
-    'Operatives': ['ventress', 'cadbane', 'maul'],
-    'Corps': ['b1', 'b1e5', 'b1e6', 'b2', 'b2ha', 'b2acm', 'geonosians'],
-    'Special Forces': ['bx', 'magnaguards'],
-    'Support': ['dekas', 'spider', 'stap'],
-    'Heavy': ['aat'],
-}
-
-EMPIRE_UNITS = {
-    'Commanders': ['vader'],
-    'Operatives': ['boba', 'ig88'],
-    'Corps': ['storms', 'snows'],
-    'Special Forces': ['deathtroopers', 'scouts'],
-    'Support': [],
-    'Heavy': ['atst'],
-}
-
-REBEL_UNITS = {
-    'Commanders': ['luke', 'han', 'leia'],
-    'Operatives': ['chewie'],
-    'Corps': ['rebels'],
-    'Special Forces': ['rebelcommandos'],
-    'Support': [],
-    'Heavy': [],
+# Map rank names from JSON to GUI display names
+RANK_TO_TYPE = {
+    'commander': 'Commanders',
+    'operative': 'Operatives',
+    'corps': 'Corps',
+    'special forces': 'Special Forces',
+    'support': 'Support',
+    'heavy': 'Heavy'
 }
 
 def get_units_by_faction():
     """
     Returns a hierarchical structure of all units organized by faction and type.
+    Automatically loads all units from faction configs based on their rank.
 
     Returns:
         dict: {faction_name: {unit_type: [(unit_id, unit_name), ...]}}
@@ -66,45 +40,35 @@ def get_units_by_faction():
 
     units_by_faction = {}
 
-    # Republic
-    units_by_faction['Republic'] = {}
-    for unit_type in UNIT_TYPES:
-        units = []
-        for unit_id in REPUBLIC_UNITS.get(unit_type, []):
-            if unit_id in republic_config:
-                unit_name = republic_config[unit_id]['name']
-                units.append((unit_id, unit_name))
-        units_by_faction['Republic'][unit_type] = units
+    # Define faction configs
+    faction_configs = {
+        'Republic': republic_config,
+        'Separatist': separatist_config,
+        'Empire': empire_config,
+        'Rebel': rebel_config,
+        'Mercenary': mercenary_config,
+    }
 
-    # Separatist
-    units_by_faction['Separatist'] = {}
-    for unit_type in UNIT_TYPES:
-        units = []
-        for unit_id in SEPARATIST_UNITS.get(unit_type, []):
-            if unit_id in separatist_config:
-                unit_name = separatist_config[unit_id]['name']
-                units.append((unit_id, unit_name))
-        units_by_faction['Separatist'][unit_type] = units
+    # Process each faction
+    for faction_name, faction_config in faction_configs.items():
+        units_by_faction[faction_name] = {}
 
-    # Empire
-    units_by_faction['Empire'] = {}
-    for unit_type in UNIT_TYPES:
-        units = []
-        for unit_id in EMPIRE_UNITS.get(unit_type, []):
-            if unit_id in empire_config:
-                unit_name = empire_config[unit_id]['name']
-                units.append((unit_id, unit_name))
-        units_by_faction['Empire'][unit_type] = units
+        # Initialize empty lists for each unit type
+        for unit_type in UNIT_TYPES:
+            units_by_faction[faction_name][unit_type] = []
 
-    # Rebel
-    units_by_faction['Rebel'] = {}
-    for unit_type in UNIT_TYPES:
-        units = []
-        for unit_id in REBEL_UNITS.get(unit_type, []):
-            if unit_id in rebel_config:
-                unit_name = rebel_config[unit_id]['name']
-                units.append((unit_id, unit_name))
-        units_by_faction['Rebel'][unit_type] = units
+        # Iterate through all units in this faction's config
+        for unit_id, unit_data in faction_config.items():
+            # Get unit rank and convert to GUI type name
+            rank = unit_data.get('rank', '').lower()
+            unit_type = RANK_TO_TYPE.get(rank)
+
+            if unit_type:
+                unit_name = unit_data.get('name', unit_id)
+                units_by_faction[faction_name][unit_type].append((unit_id, unit_name))
+            else:
+                # Unknown rank, skip or log warning
+                print(f"Warning: Unknown rank '{rank}' for unit {unit_id}")
 
     return units_by_faction
 
@@ -128,35 +92,64 @@ def get_unit_weapons(unit_id):
 
     weapon_descriptions = []
     for i, weapon in enumerate(weapons):
-        # Get dice counts [white, black, red]
-        dice_counts = weapon.dice_counts
-        white, black, red = dice_counts
+        # Use weapon name if available, otherwise generate description
+        if hasattr(weapon, 'name') and weapon.name:
+            # Use weapon name with dice and keywords
+            dice_counts = weapon.dice_counts
+            white, black, red = dice_counts
 
-        # Build dice profile string
-        dice_parts = []
-        if white > 0:
-            dice_parts.append(f"{white}W")
-        if black > 0:
-            dice_parts.append(f"{black}B")
-        if red > 0:
-            dice_parts.append(f"{red}R")
+            # Build dice profile string
+            dice_parts = []
+            if white > 0:
+                dice_parts.append(f"{white}W")
+            if black > 0:
+                dice_parts.append(f"{black}B")
+            if red > 0:
+                dice_parts.append(f"{red}R")
 
-        dice_str = "+".join(dice_parts) if dice_parts else "0 dice"
+            dice_str = "+".join(dice_parts) if dice_parts else "0 dice"
 
-        # Get keywords
-        keywords = []
-        if weapon.impacts > 0:
-            keywords.append(f"Impact {weapon.impacts}")
-        if weapon.pierce > 0:
-            keywords.append(f"Pierce {weapon.pierce}")
-        if weapon.criticals > 0:
-            keywords.append(f"Crit {weapon.criticals}")
+            # Get keywords
+            keywords = []
+            if weapon.impacts > 0:
+                keywords.append(f"Impact {weapon.impacts}")
+            if weapon.pierce > 0:
+                keywords.append(f"Pierce {weapon.pierce}")
+            if weapon.criticals > 0:
+                keywords.append(f"Crit {weapon.criticals}")
 
-        # Build description
-        if keywords:
-            desc = f"Weapon {i}: [{dice_str}] {', '.join(keywords)}"
+            # Build description with name
+            if keywords:
+                desc = f"{weapon.name}: [{dice_str}] {', '.join(keywords)}"
+            else:
+                desc = f"{weapon.name}: [{dice_str}]"
         else:
-            desc = f"Weapon {i}: [{dice_str}]"
+            # Fallback to old format for weapons without names
+            dice_counts = weapon.dice_counts
+            white, black, red = dice_counts
+
+            dice_parts = []
+            if white > 0:
+                dice_parts.append(f"{white}W")
+            if black > 0:
+                dice_parts.append(f"{black}B")
+            if red > 0:
+                dice_parts.append(f"{red}R")
+
+            dice_str = "+".join(dice_parts) if dice_parts else "0 dice"
+
+            keywords = []
+            if weapon.impacts > 0:
+                keywords.append(f"Impact {weapon.impacts}")
+            if weapon.pierce > 0:
+                keywords.append(f"Pierce {weapon.pierce}")
+            if weapon.criticals > 0:
+                keywords.append(f"Crit {weapon.criticals}")
+
+            if keywords:
+                desc = f"Weapon {i}: [{dice_str}] {', '.join(keywords)}"
+            else:
+                desc = f"Weapon {i}: [{dice_str}]"
 
         weapon_descriptions.append(desc)
 

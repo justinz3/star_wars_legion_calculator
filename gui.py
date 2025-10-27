@@ -907,10 +907,26 @@ class LegionCalculatorGUI(QMainWindow):
                 # For "at least" graphs, compute cumulative
                 if graph_type == '≥X':
                     cumulative_probs = []
+                    cumulative_hits = []
+                    cumulative_crits = []
                     for i in range(len(probabilities)):
                         prob_at_least = sum(probabilities[i:])
                         cumulative_probs.append(prob_at_least)
+                        # Calculate weighted composition for "at least X damage"
+                        # The bar height should match prob_at_least, split by composition
+                        if prob_at_least > 0:
+                            # Sum of (probability * portion) for hits and crits
+                            hits_sum = sum(probabilities[j] * hits_portions[j] / 100 for j in range(i, len(probabilities)))
+                            crits_sum = sum(probabilities[j] * crits_portions[j] / 100 for j in range(i, len(probabilities)))
+                            # Don't normalize - these already represent the cumulative portions
+                            cumulative_hits.append(hits_sum)
+                            cumulative_crits.append(crits_sum)
+                        else:
+                            cumulative_hits.append(0)
+                            cumulative_crits.append(0)
                     probabilities = cumulative_probs
+                    hits_portions = cumulative_hits
+                    crits_portions = cumulative_crits
 
                 # Plot stacked bars
                 ax.bar(damage_values, hits_portions, color='steelblue', edgecolor='black', label='Hits')

@@ -1,0 +1,1746 @@
+{
+  "anakinskywalker": {
+    "name": "Anakin Skywalker",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Anakin's Lightsaber",
+        "dice": [
+          0,
+          0,
+          5
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 3,
+          "pierce": 3
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "chewbaccarepublic": {
+    "name": "Chewbacca (Republic)",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Overwhelm",
+        "dice": [
+          0,
+          0,
+          4
+        ],
+        "range": "melee",
+        "keywords": {
+          "lethal": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Chewbacca's Bowcaster",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "critical": 1,
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "clonecaptainrex": {
+    "name": "Clone Captain Rex",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Dual DC-17 Hand Blasters",
+        "dice": [
+          0,
+          0,
+          3
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "clonecommander": {
+    "name": "Clone Commander",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Commander's DC-15 Blaster Rifle",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "clonecommandercody": {
+    "name": "Clone Commander Cody",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Cody's DC-15a Blaster",
+        "dice": [
+          1,
+          1,
+          2
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "obiwankenobi": {
+    "name": "Obi-Wan Kenobi",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Obi-Wan's Lightsaber",
+        "dice": [
+          2,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {
+          "critical": 2,
+          "impact": 2,
+          "pierce": 2
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "pykesyndicatecapo": {
+    "name": "Pyke Syndicate Capo",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Capo's P13 Long Blaster",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "wookieechieftain": {
+    "name": "Wookiee Chieftain",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Ancestral Weapon",
+        "dice": [
+          2,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Chieftain's Bowcaster",
+        "dice": [
+          0,
+          4,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "yoda": {
+    "name": "Yoda",
+    "faction": "republic",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Yoda's Lightsaber",
+        "dice": [
+          0,
+          0,
+          4
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 2,
+          "pierce": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "Force Wave",
+        "dice": [
+          0,
+          4,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "padmamidala": {
+    "name": "Padm\u00e9 Amidala",
+    "faction": "republic",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Martial Arts",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Padm\u00e9's ELG-3A Blaster Pistol",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Looted E-5 Blaster",
+        "dice": [
+          1,
+          0,
+          1
+        ],
+        "range": "1-3",
+        "keywords": {
+          "blast": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "r2d2": {
+    "name": "R2-D2",
+    "faction": "republic",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Electro-Shock",
+        "dice": [
+          3,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "thebadbatch": {
+    "name": "The Bad Batch",
+    "faction": "republic",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-17 Hand Blaster",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Wrecker (Bad Batch)",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Crosshair (Bad Batch)",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "1-5",
+        "keywords": {
+          "pierce": 1,
+          "critical": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Omega",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "phaseiclonetroopers": {
+    "name": "Phase I Clone Troopers",
+    "faction": "republic",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-15A Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Z-6 Phase I Trooper",
+        "dice": [
+          6,
+          0,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-15 Phase I Trooper",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "1-4",
+        "keywords": {
+          "critical": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "DP-23 Phase I Trooper",
+        "dice": [
+          1,
+          2,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "RPS-6 Phase I Trooper",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "2-4",
+        "keywords": {
+          "impact": 2
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "phaseiiclonetroopers": {
+    "name": "Phase II Clone Troopers",
+    "faction": "republic",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-15A Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "pykesyndicatefootsoldiers": {
+    "name": "Pyke Syndicate Foot Soldiers",
+    "faction": "republic",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Stun Baton",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "P13 Long Blaster",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "arctroopers": {
+    "name": "ARC Troopers",
+    "faction": "republic",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-17 Hand Blasters",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "DC-15A Blaster Rifle",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "DC-15x ARC Trooper",
+        "dice": [
+          0,
+          1,
+          1
+        ],
+        "range": "1-5",
+        "keywords": {
+          "lethal": 1,
+          "critical": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Fives",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Echo",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "1-5",
+        "keywords": {
+          "critical": 1,
+          "lethal": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ]
+  },
+  "arctroopersstriketeam": {
+    "name": "ARC Troopers (Strike Team)",
+    "faction": "republic",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-17 Hand Blasters",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "DC-15A Blaster Rifle",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ]
+  },
+  "wookieewarriorskashyyykdefenders": {
+    "name": "Wookiee Warriors (Kashyyyk Defenders)",
+    "faction": "republic",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "X1 Carbine",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Battle Shield Wookiee",
+        "dice": [
+          0,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Bowcaster Wookiee",
+        "dice": [
+          1,
+          0,
+          1
+        ],
+        "range": "1",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Long Gun Wookiee",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1-4",
+        "keywords": {
+          "suppressive": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "wookieewarriorsnoblefighters": {
+    "name": "Wookiee Warriors (Noble Fighters)",
+    "faction": "republic",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Ryyk Blade",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Kashyyyk Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Battle Shield Wookiee",
+        "dice": [
+          0,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Bowcaster Wookiee",
+        "dice": [
+          1,
+          0,
+          1
+        ],
+        "range": "1",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Long Gun Wookiee",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1-4",
+        "keywords": {
+          "suppressive": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "atrtgalacticrepublic": {
+    "name": "AT-RT (Galactic Republic)",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Grappling Claws",
+        "dice": [
+          0,
+          0,
+          3
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Merr-Sonn RPC-2 Rocket Launcher",
+        "dice": [
+          2,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "critical": 1,
+          "impact": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "AT-RT Flamethrower",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1",
+        "keywords": {
+          "blast": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "AT-RT Laser Cannon",
+        "dice": [
+          0,
+          2,
+          1
+        ],
+        "range": "2-4",
+        "keywords": {
+          "impact": 3
+        },
+        "warnings": []
+      },
+      {
+        "name": "AT-RT Rotary Blaster",
+        "dice": [
+          0,
+          5,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "blast": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "barcspeeder": {
+    "name": "BARC Speeder",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "DC-15A Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Twin Light Blaster Cannons",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Fixed: Front",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      },
+      {
+        "name": "BARC RPS-6 Gunner",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "2-4",
+        "keywords": {
+          "impact": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "BARC Ion Gunner",
+        "dice": [
+          1,
+          3,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "BARC Twin Laser Gunner",
+        "dice": [
+          2,
+          2,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": [
+      "No range found",
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "clonecommandos": {
+    "name": "Clone Commandos",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Gauntlet Vibroblade",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC17m ICWS Blaster Carbine",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "DC-17m ICWS Sniper/Anti-Armor Config",
+        "dice": [
+          0,
+          2,
+          1
+        ],
+        "range": "3-4",
+        "keywords": {
+          "lethal": 1,
+          "impact": 1,
+          "scatter": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 1,
+    "shields": 1,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "clonecommandosdeltasquad": {
+    "name": "Clone Commandos (Delta Squad)",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Gauntlet Vibroblade",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC17m ICWS Blaster Carbine",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "DC-17m ICWS Sniper/Anti-Armor Config",
+        "dice": [
+          0,
+          2,
+          1
+        ],
+        "range": "3-4",
+        "keywords": {
+          "lethal": 1,
+          "impact": 1,
+          "scatter": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 1,
+    "shields": 1,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "raddaughgnaspfluttercraft": {
+    "name": "Raddaugh Gnasp Fluttercraft",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Pilot's Kashyyyk Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Gnasp Bombardier",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {
+          "suppressive": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Gnasp Gunner",
+        "dice": [
+          0,
+          2,
+          2
+        ],
+        "range": "1-3",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "raddaughgnaspfluttercraftattackcraft": {
+    "name": "Raddaugh Gnasp Fluttercraft (Attack Craft)",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Pilot's Kashyyyk Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Gnasp Bombardier",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {
+          "suppressive": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Gnasp Gunner",
+        "dice": [
+          0,
+          2,
+          2
+        ],
+        "range": "1-3",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "swoopbikeriders": {
+    "name": "Swoop Bike Riders",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Heavy Blaster Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Vibroaxe",
+        "dice": [
+          0,
+          1,
+          2
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Keywords",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": [
+      "No range found",
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "laatlepatroltransport": {
+    "name": "LAAT/le Patrol Transport",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Twin Laser Cannons",
+        "dice": [
+          0,
+          3,
+          1
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Fixed: Front",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": [
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "tx130saberclassfightertank": {
+    "name": "TX-130 Saber-class Fighter Tank",
+    "faction": "republic",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Twin Lateral GA-6n Laser Cannons",
+        "dice": [
+          2,
+          2,
+          2
+        ],
+        "range": "1-4",
+        "keywords": {
+          "critical": 1,
+          "impact": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "TX-130 Twin Laser Turret",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "critical": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "TX-130 Beam Cannon Turret",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "1-4",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "infantrysupportplatform": {
+    "name": "Infantry Support Platform",
+    "faction": "republic",
+    "rank": "heavy",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "DC-15 Blaster Rifles",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Twin Beam Cannons",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "1-4",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Twin Blaster Cannons",
+        "dice": [
+          0,
+          6,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "blast": 1,
+          "critical": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "Twin Missile Pods",
+        "dice": [
+          0,
+          0,
+          4
+        ],
+        "range": "2-4",
+        "keywords": {
+          "impact": 2
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 3,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": []
+  }
+}

@@ -2,6 +2,7 @@
 class UnitProperties:
 
     NAME = "name"
+    RANK = "rank"
     SIZE = "num_minis"
     WEAPONS = "weapons"
     SAVES = "saves"

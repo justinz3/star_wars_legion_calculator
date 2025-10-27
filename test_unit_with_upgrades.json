@@ -1,0 +1,137 @@
+{
+  "mandaloriansupercommandos": {
+    "name": "Mandalorian Super Commandos",
+    "faction": "mercenary",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Expertise",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Westar-35 Blaster Pistols",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Galar-15 Blaster Carbine",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Rook Kast",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Super Commando Gunslinger",
+        "dice": [
+          2,
+          2,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {
+          "lethal": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Super Commando Marksman",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Super Commando Jetpack Rockets",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "1-4",
+        "keywords": {
+          "blast": 1,
+          "critical": 1,
+          "impact": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ],
+    "upgrades": [
+      {
+        "name": "Mandalorian Super Commando",
+        "url": "https://starwarslegion.fandom.com/wiki/Mandalorian_Super_Commando"
+      },
+      {
+        "name": "Rook Kast",
+        "url": "https://starwarslegion.fandom.com/wiki/Rook_Kast"
+      },
+      {
+        "name": "Super Commando Gunslinger",
+        "url": "https://starwarslegion.fandom.com/wiki/Super_Commando_Gunslinger"
+      },
+      {
+        "name": "Super Commando Marksman",
+        "url": "https://starwarslegion.fandom.com/wiki/Super_Commando_Marksman"
+      },
+      {
+        "name": "Super Commando Combat Shields",
+        "url": "https://starwarslegion.fandom.com/wiki/Super_Commando_Combat_Shields"
+      },
+      {
+        "name": "Super Commando Jetpack Rockets",
+        "url": "https://starwarslegion.fandom.com/wiki/Super_Commando_Jetpack_Rockets"
+      }
+    ]
+  }
+}

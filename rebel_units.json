@@ -1,0 +1,2305 @@
+{
+  "c3pogoldengod": {
+    "name": "C-3PO (Golden God)",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No weapons found"
+    ]
+  },
+  "hansolo": {
+    "name": "Han Solo",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Brawl",
+        "dice": [
+          3,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Han's DL-44 Blaster Pistol",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 2
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "landocalrissian": {
+    "name": "Lando Calrissian",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Lando's X-8 Night Sniper Pistol",
+        "dice": [
+          0,
+          1,
+          1
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "leiaorgana": {
+    "name": "Leia Organa",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Martial Arts",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Leia's Defender Sporting Blaster",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 2,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "logray": {
+    "name": "Logray",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Staff",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "lukeskywalker": {
+    "name": "Luke Skywalker",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Anakin's Lightsaber",
+        "dice": [
+          0,
+          6,
+          0
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 2,
+          "pierce": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "Luke's DL-44 Blaster Pistol",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 2
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "pykesyndicatecapo": {
+    "name": "Pyke Syndicate Capo",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Capo's P13 Long Blaster",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "rebelofficer": {
+    "name": "Rebel Officer",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Officer's A-180 Blaster Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "wicket": {
+    "name": "Wicket",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Spear",
+        "dice": [
+          0,
+          1,
+          2
+        ],
+        "range": "melee",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Sling",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "ahsokatano": {
+    "name": "Ahsoka Tano",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Ahsoka's Lightsabers",
+        "dice": [
+          2,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "thebadbatch": {
+    "name": "The Bad Batch",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DC-17 Hand Blaster",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Wrecker (Bad Batch)",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Crosshair (Bad Batch)",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "1-5",
+        "keywords": {
+          "pierce": 1,
+          "critical": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Omega",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "bobafettdaimyo": {
+    "name": "Boba Fett (Daimyo)",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Fett's Gaderffii Stick",
+        "dice": [
+          0,
+          1,
+          3
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Fett's EE-3 Carbine",
+        "dice": [
+          0,
+          3,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "cassianandor": {
+    "name": "Cassian Andor",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Cassian's Covert Blaster",
+        "dice": [
+          2,
+          0,
+          1
+        ],
+        "range": "1-2",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "chewbacca": {
+    "name": "Chewbacca",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Overwhelm",
+        "dice": [
+          0,
+          0,
+          4
+        ],
+        "range": "melee",
+        "keywords": {
+          "lethal": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Chewbacca's Bowcaster",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "dindjarin": {
+    "name": "Din Djarin",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Vibro-Knife",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {
+          "lethal": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Din's Modified IB-94 Pistol",
+        "dice": [
+          0,
+          1,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "lethal": 1,
+          "longshot": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "ig11": {
+    "name": "IG-11",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Overpower",
+        "dice": [
+          0,
+          0,
+          4
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Modified E-11 Blaster",
+        "dice": [
+          2,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Modified DLT-20A Rifle",
+        "dice": [
+          1,
+          2,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ]
+  },
+  "jynerso": {
+    "name": "Jyn Erso",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Collapsible Tonfa",
+        "dice": [
+          0,
+          4,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "k2so": {
+    "name": "K-2SO",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Overpower",
+        "dice": [
+          0,
+          0,
+          4
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "lukeskywalkeroperative": {
+    "name": "Luke Skywalker (Operative)",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Luke's Lightsaber",
+        "dice": [
+          0,
+          7,
+          0
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 2,
+          "pierce": 2
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "r2d2": {
+    "name": "R2-D2",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Electro-Shock",
+        "dice": [
+          3,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "sabinewren": {
+    "name": "Sabine Wren",
+    "faction": "rebel",
+    "rank": "operative",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Expertise",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Dual Westar-35 Blaster Pistols",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "ewokskirmishers": {
+    "name": "Ewok Skirmishers",
+    "faction": "rebel",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Spear",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Axe Ewok",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "melee",
+        "keywords": {
+          "pierce": 1,
+          "impact": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": []
+  },
+  "fleettroopers": {
+    "name": "Fleet Troopers",
+    "faction": "rebel",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DH-17 Blaster Pistol",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "MPL-57 Barrage Trooper",
+        "dice": [
+          2,
+          1,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "blast": 1,
+          "impact": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "Scatter Gun Trooper",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "1-2",
+        "keywords": {
+          "scatter": 1,
+          "lethal": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "pykesyndicatefootsoldiers": {
+    "name": "Pyke Syndicate Foot Soldiers",
+    "faction": "rebel",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Stun Baton",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "P13 Long Blaster",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "rebeltroopers": {
+    "name": "Rebel Troopers",
+    "faction": "rebel",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "A-280 Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "MPL-57 Ion Trooper",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "1-3",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Z-6 Trooper",
+        "dice": [
+          6,
+          0,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "SX-21 Trooper",
+        "dice": [
+          2,
+          0,
+          2
+        ],
+        "range": "1-2",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "rebelveterans": {
+    "name": "Rebel Veterans",
+    "faction": "rebel",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "A-280 Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "markiimediumblastertrooper": {
+    "name": "Mark II Medium Blaster Trooper",
+    "faction": "rebel",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "A-280 Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Mark II Medium Blaster",
+        "dice": [
+          0,
+          4,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ]
+  },
+  "ewokslingers": {
+    "name": "Ewok Slingers",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Stones",
+        "dice": [
+          1,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Slings",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Primitive",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      },
+      {
+        "name": "Axe Ewok",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "melee",
+        "keywords": {
+          "pierce": 1,
+          "impact": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "mandalorianresistance": {
+    "name": "Mandalorian Resistance",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Westar 35 Blaster Pistols",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Beskad Duelist",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "melee",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Tristan Wren",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "lethal": 1,
+          "pierce": 1,
+          "suppressive": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Ursa Wren",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Jetpack Rockets",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "3-4",
+        "keywords": {
+          "blast": 1,
+          "impact": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "mandalorianresistanceclanwren": {
+    "name": "Mandalorian Resistance (Clan Wren)",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Expertise",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Keywords",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      },
+      {
+        "name": "Westar 35 Blaster Pistols",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No dice pool found",
+      "No range found",
+      "No range found"
+    ]
+  },
+  "rebelcommandos": {
+    "name": "Rebel Commandos",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "A-280 Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Proton Charge Saboteur",
+        "dice": [
+          2,
+          0,
+          1
+        ],
+        "range": "1",
+        "keywords": {
+          "blast": 1,
+          "impact": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "DH-447 Sniper",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "1-5",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "rebelcommandosstriketeam": {
+    "name": "Rebel Commandos Strike Team",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "A-280 Blaster Rifle",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Proton Charge Saboteur",
+        "dice": [
+          2,
+          0,
+          1
+        ],
+        "range": "1",
+        "keywords": {
+          "blast": 1,
+          "impact": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "DH-447 Sniper",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "1-5",
+        "keywords": {
+          "pierce": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "rebelpathfinders": {
+    "name": "Rebel Pathfinders",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "A-300 Blaster Rifle",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "A-300 Short Range/Long Range Config",
+        "dice": [
+          1,
+          0,
+          1
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "wookieewarriorsfreedomfighters": {
+    "name": "Wookiee Warriors (Freedom Fighters)",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Ryyk Blade",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Kashyyyk Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Battle Shield Wookiee",
+        "dice": [
+          0,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Bowcaster Wookiee",
+        "dice": [
+          1,
+          0,
+          1
+        ],
+        "range": "1",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Long Gun Wookiee",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1-4",
+        "keywords": {
+          "suppressive": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "wookieewarriorskashyyykresistance": {
+    "name": "Wookiee Warriors (Kashyyyk Resistance)",
+    "faction": "rebel",
+    "rank": "special forces",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "X1 Carbine",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Battle Shield Wookiee",
+        "dice": [
+          0,
+          2,
+          2
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Bowcaster Wookiee",
+        "dice": [
+          1,
+          0,
+          1
+        ],
+        "range": "1",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Long Gun Wookiee",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1-4",
+        "keywords": {
+          "suppressive": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "14fdlasercannonteam": {
+    "name": "1.4 FD Laser Cannon Team",
+    "faction": "rebel",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "DH-17 Blaster Pistols",
+        "dice": [
+          4,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "1.4 FD Laser Cannon",
+        "dice": [
+          0,
+          5,
+          0
+        ],
+        "range": "",
+        "keywords": {
+          "impact": 2
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ]
+  },
+  "atrt": {
+    "name": "AT-RT",
+    "faction": "rebel",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Grappling Claws",
+        "dice": [
+          0,
+          0,
+          3
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "A-300 Blaster Rifle",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "AT-RT Flamethrower",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "1",
+        "keywords": {
+          "blast": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "AT-RT Laser Cannon",
+        "dice": [
+          0,
+          2,
+          1
+        ],
+        "range": "2-4",
+        "keywords": {
+          "impact": 3
+        },
+        "warnings": []
+      },
+      {
+        "name": "AT-RT Rotary Blaster",
+        "dice": [
+          0,
+          5,
+          0
+        ],
+        "range": "1-3",
+        "keywords": {
+          "blast": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "swoopbikeriders": {
+    "name": "Swoop Bike Riders",
+    "faction": "rebel",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Heavy Blaster Pistol",
+        "dice": [
+          1,
+          1,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "Vibroaxe",
+        "dice": [
+          0,
+          1,
+          2
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "Keywords",
+        "dice": [
+          0,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No dice pool found",
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 1,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": [
+      "No range found",
+      "No dice pool found",
+      "No range found"
+    ]
+  },
+  "tauntaunriders": {
+    "name": "Tauntaun Riders",
+    "faction": "rebel",
+    "rank": "support",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Horns & Hind Claws",
+        "dice": [
+          1,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {
+          "ram": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "DL-44 Blaster Pistol",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ]
+  },
+  "aa5speedertruck": {
+    "name": "A-A5 Speeder Truck",
+    "faction": "rebel",
+    "rank": "heavy",
+    "size": 1,
+    "weapons": [],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No weapons found"
+    ]
+  },
+  "chewbaccaletthewookieewin": {
+    "name": "Chewbacca (Let the Wookiee Win)",
+    "faction": "rebel",
+    "rank": "heavy",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Grenade Launcher",
+        "dice": [
+          0,
+          2,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "88 Twin Light Blaster",
+        "dice": [
+          1,
+          1,
+          1
+        ],
+        "range": "",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      },
+      {
+        "name": "MS-4 Twin Blaster Cannon",
+        "dice": [
+          2,
+          2,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "impact": 3
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found",
+      "No range found"
+    ]
+  },
+  "t47airspeeder": {
+    "name": "T-47 Airspeeder",
+    "faction": "rebel",
+    "rank": "heavy",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "AP/11 Double Laser Cannon",
+        "dice": [
+          0,
+          3,
+          3
+        ],
+        "range": "1-3",
+        "keywords": {
+          "impact": 3
+        },
+        "warnings": []
+      },
+      {
+        "name": "Ax-108 \u201cGround Buzzer\u201d",
+        "dice": [
+          0,
+          4,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {
+          "blast": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Mo/DK Power Harpoon",
+        "dice": [
+          0,
+          0,
+          1
+        ],
+        "range": "1-2",
+        "keywords": {
+          "impact": 1
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 1,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": []
+  },
+  "x34landspeeder": {
+    "name": "X-34 Landspeeder",
+    "faction": "rebel",
+    "rank": "heavy",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Driver's DH-17 Blaster Pistol",
+        "dice": [
+          2,
+          0,
+          0
+        ],
+        "range": "1-2",
+        "keywords": {},
+        "warnings": []
+      }
+    ],
+    "defense_die": "white",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": true,
+    "armor": 2,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 1,
+    "warnings": []
+  }
+}

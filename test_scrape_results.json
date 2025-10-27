@@ -1,0 +1,233 @@
+{
+  "darthvader": {
+    "name": "Darth Vader",
+    "faction": "empire",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Vader's Lightsaber",
+        "dice": [
+          0,
+          0,
+          6
+        ],
+        "range": "melee",
+        "keywords": {
+          "pierce": 3,
+          "impact": 3
+        },
+        "warnings": []
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": [],
+    "upgrades": [
+      {
+        "name": "Command",
+        "url": "https://starwarslegion.fandom.com/wiki/Command"
+      },
+      {
+        "name": "Force",
+        "url": "https://starwarslegion.fandom.com/wiki/Force"
+      }
+    ]
+  },
+  "stormtroopers": {
+    "name": "Stormtroopers",
+    "faction": "empire",
+    "rank": "corps",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "dice": [
+          0,
+          1,
+          0
+        ],
+        "range": "melee",
+        "keywords": {},
+        "warnings": []
+      },
+      {
+        "name": "E-11 Blaster Rifle",
+        "dice": [
+          1,
+          0,
+          0
+        ],
+        "range": "",
+        "keywords": {},
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ],
+    "upgrades": [
+      {
+        "name": "Gear",
+        "url": "https://starwarslegion.fandom.com/wiki/Gear"
+      },
+      {
+        "name": "Grenades",
+        "url": "https://starwarslegion.fandom.com/wiki/Grenades"
+      },
+      {
+        "name": "Heavy Weapon",
+        "url": "https://starwarslegion.fandom.com/wiki/Heavy_Weapon"
+      },
+      {
+        "name": "Personnel",
+        "url": "https://starwarslegion.fandom.com/wiki/Personnel"
+      }
+    ]
+  },
+  "generalgrievous": {
+    "name": "General Grievous",
+    "faction": "separatist",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Trophy Lightsabers",
+        "dice": [
+          1,
+          2,
+          1
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": []
+      },
+      {
+        "name": "Trophy Lightsabers",
+        "dice": [
+          1,
+          2,
+          1
+        ],
+        "range": "",
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": true,
+    "immune_pierce": false,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ],
+    "upgrades": [
+      {
+        "name": "Armament",
+        "url": "https://starwarslegion.fandom.com/wiki/Armament"
+      },
+      {
+        "name": "Command",
+        "url": "https://starwarslegion.fandom.com/wiki/Command_(Upgrade)"
+      },
+      {
+        "name": "Training",
+        "url": "https://starwarslegion.fandom.com/wiki/Training"
+      }
+    ]
+  },
+  "lukeskywalker": {
+    "name": "Luke Skywalker",
+    "faction": "rebel",
+    "rank": "commander",
+    "size": 1,
+    "weapons": [
+      {
+        "name": "Anakin's Lightsaber",
+        "dice": [
+          0,
+          6,
+          0
+        ],
+        "range": "melee",
+        "keywords": {
+          "impact": 2,
+          "pierce": 2
+        },
+        "warnings": []
+      },
+      {
+        "name": "Luke's DL-44 Blaster Pistol",
+        "dice": [
+          0,
+          0,
+          2
+        ],
+        "range": "",
+        "keywords": {
+          "pierce": 2
+        },
+        "warnings": [
+          "No range found"
+        ]
+      }
+    ],
+    "defense_die": "red",
+    "surge_hit": false,
+    "surge_crit": false,
+    "surge_block": false,
+    "armor": 0,
+    "shields": 0,
+    "dodges": 0,
+    "impervious": false,
+    "immune_pierce": true,
+    "cover_improvement": 0,
+    "warnings": [
+      "No range found"
+    ],
+    "upgrades": [
+      {
+        "name": "Force",
+        "url": "https://starwarslegion.fandom.com/wiki/Force"
+      },
+      {
+        "name": "Gear",
+        "url": "https://starwarslegion.fandom.com/wiki/Gear"
+      }
+    ]
+  }
+}
